@@ -1,0 +1,81 @@
+
+set last_window_maximized True
+set last_window_width 895
+set last_window_height 564
+set port /dev/ttyACM0
+set last_sash_position 467
+set baudrate 250000
+set last_bed_temperature 65.0
+set last_temperature 185.0
+set xy_feedrate 9000
+set z_feedrate 900
+set e_feedrate 95
+set last_extrusion 1
+button 0 "Topo" /c "Orange" Topo
+button 1 "Center" /c "teal" g0 x200 y150 f9000
+button 2 "TopLeft" /c "teal" g0 x80 y70 f9000
+button 3 "TopCenter" /c "teal" g0 x200 y70 f9000
+button 4 "TopRight" /c "teal" g0 x325 y70 f9000
+button 5 "BottomLeft" /c "teal" g0 x80 y315 f9000
+button 6 "BottomCenter" /c "teal" g0 x200 y315 f9000
+macro Check
+  g0 x80 y70
+  g0 x325 y70
+  g0 x325 y315
+  g0 x80 y315
+  g0 x80 y70
+button 7 "BottomRight" /c "teal" g0 x325 y315 f9000
+macro D1
+  g0 x80 y70
+  g0 x325 y315
+  g0 x80 y315
+  g0 x325 y70
+  g0 x80 y70
+button 8 "Top" /c "teal" Top
+set total_filament_used 42727.5664
+button 9 "Bottom" /c "teal" Bottom
+button 10 "Check" /c "teal" Check
+button 11 "Diag" /c "teal" D1
+macro Top
+  g0 x325 y70 F9000
+  g0 x80 y70 F9000
+button 12 "Laser ON" /c "red" M42 P13 S255
+macro Bottom
+  g0 x325 y315 F9000
+  g0 x80 y315 F9000
+button 13 "Laser OFF" /c "red" M42 P13 S0
+macro FocusTest
+  M42 P13 S0
+  M106 S255
+  G91
+  G0 X0 Y0 F2000
+  M400
+  M3
+  M42 P13 S32
+  G0 X25 F480
+  M400
+  M5
+  M42 P13 S0
+  G0 X-25 F2000
+  G0 X0 Y0.127 F2000
+  M400
+  M3
+  M42 P13 S32
+  G0 X25 F480
+  M400
+  M5
+  M42 P13 S0
+  G0 X-25 F2000
+  G90
+macro HomeOffset
+  g0 z10 f100
+  g28 y
+  g28 x
+  g0 x100 y100 f9000
+  g28 z
+  
+macro Topo
+  G28
+  G29 V4 T
+button 14 "PauseSD" M25
+
