@@ -10,7 +10,7 @@ set last_temperature 185.0
 set xy_feedrate 9000
 set z_feedrate 900
 set e_feedrate 95
-set last_extrusion 1
+set last_extrusion 25
 button 0 "Topo" /c "Orange" Topo
 button 1 "Center" /c "teal" g0 x200 y150 f9000
 button 2 "TopLeft" /c "teal" g0 x80 y70 f9000
