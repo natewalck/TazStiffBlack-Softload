@@ -1,12 +1,12 @@
 
-set last_window_maximized True
-set last_window_width 895
-set last_window_height 564
-set port /dev/ttyACM0
+set last_window_maximized False
+set last_window_width 1083
+set last_window_height 694
+set port /dev/ttyACM1
 set last_sash_position 467
 set baudrate 250000
 set last_bed_temperature 65.0
-set last_temperature 185.0
+set last_temperature 200.0
 set xy_feedrate 9000
 set z_feedrate 900
 set e_feedrate 95
@@ -19,20 +19,20 @@ button 4 "TopRight" /c "teal" g0 x325 y70 f9000
 button 5 "BottomLeft" /c "teal" g0 x80 y315 f9000
 button 6 "BottomCenter" /c "teal" g0 x200 y315 f9000
 macro Check
-  g0 x80 y70
+  g0 x80 y70 F9000
   g0 x325 y70
   g0 x325 y315
   g0 x80 y315
   g0 x80 y70
 button 7 "BottomRight" /c "teal" g0 x325 y315 f9000
 macro D1
-  g0 x80 y70
+  g0 x80 y70 F9000
   g0 x325 y315
   g0 x80 y315
   g0 x325 y70
   g0 x80 y70
 button 8 "Top" /c "teal" Top
-set total_filament_used 42727.5664
+set total_filament_used 46119.50816
 button 9 "Bottom" /c "teal" Bottom
 button 10 "Check" /c "teal" Check
 button 11 "Diag" /c "teal" D1
@@ -79,3 +79,13 @@ macro Topo
   G29 V4 T
 button 14 "PauseSD" M25
 
+set build_dimensions 379.00x340.00x190.00-55.00-40.00+0.00+0.00+0.00+0.00
+set extruders 2
+set viz3d False
+set tempgauges True
+
+set mainviz 2D
+button 15 "FanOn" /c "Blue" M106 S255
+button 16 "FanOff" /c "Blue" M106 S0
+set last_file_path /home/commonadmin/projects/_random/HacDCOptics/staging
+set recentfiles ["/home/commonadmin/projects/_random/HacDCOptics/staging/screwCaps.gcode"]
