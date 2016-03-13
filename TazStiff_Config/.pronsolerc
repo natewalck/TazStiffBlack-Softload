@@ -1,5 +1,5 @@
 
-set last_window_maximized False
+set last_window_maximized True
 set last_window_width 1083
 set last_window_height 694
 set port /dev/ttyACM1
@@ -87,5 +87,5 @@ set tempgauges True
 set mainviz 2D
 button 15 "FanOn" /c "Blue" M106 S255
 button 16 "FanOff" /c "Blue" M106 S0
-set last_file_path /home/commonadmin/projects/_random/HacDCOptics/staging
-set recentfiles ["/home/commonadmin/projects/_random/HacDCOptics/staging/screwCaps.gcode"]
+set last_file_path /home/commonadmin/projects/_random/HacDCOptics/staging/FiveAxisKit
+set recentfiles ["/home/commonadmin/projects/_random/HacDCOptics/staging/FiveAxisKit/FiveAxis_Substages_20160303-153105_1.2.10-dev.gcode", "/home/commonadmin/projects/_random/HacDCOptics/staging/FiveAxisKit/FiveAxis_Substages_20160303-152731_1.2.10-dev.gcode", "/home/commonadmin/projects/_random/HacDCOptics/staging/screwCaps.gcode"]
