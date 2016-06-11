@@ -1,5 +1,5 @@
 G28
-G0 X0 Y0 Z15 
+G0 X10 Y0 Z15
 G30
 
 M98 P/macros/mapping/Prow.g

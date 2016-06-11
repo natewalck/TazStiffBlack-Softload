@@ -5,7 +5,7 @@ M114
 M98 P/macros/probe_noxy.g
 
 G90
-G0 X0
+G0 X10
 G30 P0 S-1 Z-10000
 
 
